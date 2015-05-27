@@ -1,4 +1,4 @@
-// https://github.com/shanecelis/tmk_keyboard/blob/master/keyboard/planck/keymap_shane.c
+// https://github.com/Raisins/tmk_keyboard/blob/master/keyboard/planck/keymap_francis.c
 
 #include "keymap_common.h"
 #include "action_layer.h"
@@ -8,6 +8,7 @@
 /*
   Francis's Planck Layout
   TODO: Write post about this.
+  TODO: update this layout
   http://www.keyboard-layout-editor.com/#/layouts/954e7a13360e1c9e101b64be2c6107e2
 */
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -17,19 +18,19 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LSFT,    Z,     X,     C,    V,      B,     N,    M,      COMM, DOT,   SLSH,    FN5,
     LCTL,    LCTL,  LALT,  LGUI, FN2,      SPC,       FN1,    LEFT, DOWN,  UP,      RGHT),
   [1] = KEYMAP( /* Raise/FN1 */
-    GRV,     1,     2,     3,     4,     5,     6,     7,     8,     9,     0,      EQL,
+    GRV,     FN11,  FN12,  FN13,  FN14,  FN15,  FN16,  FN17,  FN18,  FN19,  FN20,   EQL,
     ESC,     TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  LBRC,  RBRC,   BSLS,
     LSFT,    F1,    F2,    F3,    F4,    F5,    F6,    F7,    F8,    F9,    F10,    FN5,
     MUTE,    TRNS,  TRNS,  TRNS,  FN3,      SPC,       FN1,   NO,    PGUP,  PGDN,   MRWD),
   [2] = KEYMAP( /* Lower/FN2 */
-    GRV,     1,     2,     3,     4,     5,     6,     P7,    P8,    P9,   0,       MINS,
-    ESC,     TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  P4,    P5,    P6,   NO,      EQL,
-    LSFT,    TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  P1,    P2,    P3,   NO,      FN5,
-    MPLY,    TRNS,  TRNS,  MUTE,  FN2,      SPC,       FN3,   P0,    VOLD, VOLU,    MFFD),
+    GRV,     1,     2,     3,     4,     5,     6,     7,     8,      9,    0,      MINS,
+    ESC,     TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  NO,    NO,     FN24, FN25,   EQL,
+    LSFT,    F11,   FN10,  F12,   F13,   F14,   TRNS,  TRNS,  TRNS,   FN19, FN20,   FN5,
+    MPLY,    TRNS,  TRNS,  MUTE,  FN2,      SPC,       FN3,   P0,     VOLD, VOLU,   MFFD),
   [3] = KEYMAP( /*  lower + raise */  //buggy sometimes, Seeems to get stuck, just hit both raise and lower
     FN7,     LBRC,  NO,    NO,     NO,   NO,    NO,    NO,    NO,    NO,   RBRC,   FN8,
     NO,      F1,    F2,    F3,     F4,   F5,    F6,    F7,    F8,    F9,   F10,    NO,
-    LSFT,    NO,    NO,    NO,     NO,   NO,    NO,    8,     9,    LBRC,  RBRC,     FN5,
+    LSFT,    F11,   F12,   F13,    F14,  F15,   NO,    NO,    NO,    LBRC,  RBRC,  FN5,
     MPLY,    NO,    NO,    MUTE,   TRNS,     SPC,      TRNS,   MFFD,  VOLD, VOLU,   MPLY)
 };
 
@@ -68,6 +69,7 @@ const uint16_t PROGMEM fn_actions[] = {
   [7] = ACTION_MACRO(M_Q0), //Command + Shift Brackets aka Change tabs, LEFT
   [8] = ACTION_MACRO(M_Q1), //Command + Shift Brackets aka Change tabs, RIGHT
 
+  [10] = ACTION_MODS_KEY(MOD_LCTL, KC_UP),
   [11] = ACTION_MODS_KEY(MOD_LSFT, KC_1),
   [12] = ACTION_MODS_KEY(MOD_LSFT, KC_2),
   [13] = ACTION_MODS_KEY(MOD_LSFT, KC_3),
