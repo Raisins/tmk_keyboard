@@ -11,6 +11,10 @@
   TODO: update this layout
   http://www.keyboard-layout-editor.com/#/layouts/954e7a13360e1c9e101b64be2c6107e2
 */
+
+
+
+
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = KEYMAP( /* Base */
     TAB,     Q,     W,     E,    R,      T,     Y,    U,      I,    O,     P,       BSPC,
@@ -20,18 +24,18 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [1] = KEYMAP( /* Raise/FN1 */
     GRV,     FN11,  FN12,  FN13,  FN14,  FN15,  FN16,  FN17,  FN18,  FN19,  FN20,   EQL,
     ESC,     TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  LBRC,  RBRC,   BSLS,
-    LSFT,    F1,    F2,    F3,    F4,    F5,    F6,    F7,    F8,    F9,    F10,    FN5,
+    LSFT,    F1,    F2,    F3,    F4,    F5,    F6,    F7,    F8,    FN24,  FN25,   FN5,
     MUTE,    TRNS,  TRNS,  TRNS,  FN3,      SPC,       FN1,   NO,    PGUP,  PGDN,   MRWD),
   [2] = KEYMAP( /* Lower/FN2 */
     GRV,     1,     2,     3,     4,     5,     6,     7,     8,      9,    0,      MINS,
-    ESC,     TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  NO,    NO,     FN24, FN25,   EQL,
-    LSFT,    F11,   FN10,  F12,   F13,   F14,   TRNS,  TRNS,  TRNS,   FN19, FN20,   FN5,
-    MPLY,    TRNS,  TRNS,  MUTE,  FN2,      SPC,       FN3,   P0,     VOLD, VOLU,   MFFD),
+    ESC,     TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  4,     5,      6,    NO,     EQL,
+    LSFT,    F11,   FN10,  F12,   F13,   F14,   TRNS,  1,     2,      3,    NO,     FN5,
+    MPLY,    TRNS,  TRNS,  TRNS,  FN2,      SPC,       FN3,   0,     VOLD,  VOLU,   MFFD),
   [3] = KEYMAP( /*  lower + raise */  //buggy sometimes, Seeems to get stuck, just hit both raise and lower
     FN7,     LBRC,  NO,    NO,     NO,   NO,    NO,    NO,    NO,    NO,   RBRC,   FN8,
     NO,      F1,    F2,    F3,     F4,   F5,    F6,    F7,    F8,    F9,   F10,    NO,
     LSFT,    F11,   F12,   F13,    F14,  F15,   NO,    NO,    NO,    LBRC,  RBRC,  FN5,
-    MPLY,    NO,    NO,    MUTE,   TRNS,     SPC,      TRNS,   MFFD,  VOLD, VOLU,   MPLY)
+    MPLY,    NO,    NO,    TRNS,   TRNS,     SPC,      TRNS,   MFFD,  VOLD, VOLU,   MPLY)
 };
 
 // Media keys dont work on mac https://github.com/tmk/tmk_keyboard/issues/195
